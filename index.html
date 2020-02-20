@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Joe's Hotdog Stand</title>
-	<style type="text/css">
-		header, h1{font-size:30px;}
-		body{font-size:20px;}
-	</style>
+    <meta charset="utf-8">
+    <title>Joe's Hotdog Stand</title>
+    <style type="text/css">
+        header, h1{font-size:30px;}
+        body{font-size:20px;}
+    </style>
 </head>
 <body>
-	<Header>Welcome to Joe's Hotdog Stand!</Header>
+    <Header>Welcome to Joe's Hotdog Stand!</Header>
     <h1>Your Order</h1>
 
     <script language="javascript"> 
 
-    	hotdogs = prompt ("How many hot dogs?", 0);
-    	totHotDogs = 3.25*hotdogs; 
-    	document.write("# Hotdogs: " 
-    		+ hotdogs + " at $3.25 is $" + totHotDogs + "\n");
+        hotdogs = prompt ("How many hot dogs?", 0);
+        totHotDogs = 3.25*hotdogs; 
+        document.write("# Hotdogs: " 
+            + hotdogs + " at $3.25 is $" + totHotDogs.toFixed(2) + "<br>");
 
-    	fries = prompt ("How many fries?", 0);
-    	totFries = 2.00*fries; 
-    	totFries = Math.round(totFries*100) / 100;
-    	document.write("# Fries: " + fries + " at $2.00 is $" + totFries + "\n");
 
-    	sodas = prompt ("How many sodas?", 0);
-    	totSodas = 1.50*sodas;
-    	document.write("# Sodas: " + sodas + " at $1.50 is $" + totSodas + "\n");
+        fries = prompt ("How many fries?", 0);
+        totFries = 2.00*fries; 
+        totFries = Math.round(totFries*100) / 100;
+        document.write("# Fries: " + fries + " at $2.00 is $" + totFries.toFixed(2) + "<br>");
 
-    	sub = totHotDogs + totFries + totSodas; 
-	    if (sub >= 20){
-	    	document.write("You qualified for our 10% discount.\n");
-	        sub = sub - sub*0.1;
-	    } else{
-		    document.write("You did not qualify for our 10% discount\n");
-	    }
+        sodas = prompt ("How many sodas?", 0);
+        totSodas = 1.50*sodas;
+        document.write("# Sodas: " + sodas + " at $1.50 is $" + totSodas.toFixed(2) + "<br>");
 
-		document.write("Subtotal: $" + sub + "\n");
 
-		tax = sub*0.0625;
-		document.write("Meals Tax: $" + tax + "\n");
+        sub = totHotDogs + totFries + totSodas; 
+        if (sub >= 20){
+            document.write("You qualified for our 10% discount.<br>");
+            sub = sub - sub*0.1;
+        } else{
+            document.write("You did not qualify for our 10% discount.<br>");
+        }
 
-		total = sub + tax;
-		document.write("Total: $" + total + "\n");
+        document.write("Subtotal: $" + sub.toFixed(2) + "<br>");
 
-	</script>
+        tax = sub*0.0625;
+        document.write("Meals Tax: $" + tax.toFixed(2) + "<br>");
+
+        total = sub + tax;
+        document.write("Total: $" + total.toFixed(2) + "<br>");
+
+    </script>
 </body>
 </html>
