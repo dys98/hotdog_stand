@@ -1,3 +1,11 @@
+<!-- Daisy Sanchez
+     COMP 20 Web Programming
+     Homework 5: Joe's Hot Dog Stand
+     20 February 2020 -->
+<!-- URL : https://dys98.github.io/hotdog_stand/ -->
+<!-- Note: If you open link in a new tab, you may 
+           need to reload the page to get prompts to appear.
+           Otherwise, it may just set the values equal to NULL. -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +21,10 @@
     <h1>Your Order</h1>
 
     <script language="javascript"> 
-
         hotdogs = prompt ("How many hot dogs?", 0);
         totHotDogs = 3.25*hotdogs; 
         document.write("# Hotdogs: " 
             + hotdogs + " at $3.25 is $" + totHotDogs.toFixed(2) + "<br>");
-
 
         fries = prompt ("How many fries?", 0);
         totFries = 2.00*fries; 
@@ -29,7 +35,6 @@
         totSodas = 1.50*sodas;
         document.write("# Sodas: " + sodas + " at $1.50 is $" + totSodas.toFixed(2) + "<br>");
 
-
         sub = totHotDogs + totFries + totSodas; 
         if (sub >= 20){
             document.write("You qualified for our 10% discount.<br>");
@@ -37,7 +42,6 @@
         } else{
             document.write("You did not qualify for our 10% discount.<br>");
         }
-
         document.write("Subtotal: $" + sub.toFixed(2) + "<br>");
 
         tax = sub*0.0625;
@@ -45,7 +49,6 @@
 
         total = sub + tax;
         document.write("Total: $" + total.toFixed(2) + "<br>");
-
     </script>
 </body>
 </html>
